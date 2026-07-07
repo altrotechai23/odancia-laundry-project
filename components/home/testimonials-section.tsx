@@ -36,7 +36,7 @@ export function TestimonialsSection() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-neutral-950 py-24 text-white">
+      <section className="relative overflow-hidden bg-white py-24 text-slate-800">
         {/* Background Glow */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-red/10 blur-3xl" />

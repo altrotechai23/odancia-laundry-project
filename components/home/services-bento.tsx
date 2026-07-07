@@ -83,10 +83,10 @@ export function ServicesBento() {
         </motion.video>
 
         {/* Luxury slate overlay */}
-        <div className="absolute inset-0 bg-slate-950/20" />
+        <div className="absolute inset-0 bg-blue-950/20" />
 
         {/* Cinematic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/30 to-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/60 via-blue-950/30 to-blue-950/90" />
 
         {/* Ambient lighting */}
         <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-brand-red/15 blur-[150px]" />
