@@ -133,7 +133,7 @@ export function HeroSection() {
       {/* FLOATING ICONS */}
       <FloatingIcon
         icon={Sparkles}
-        className="left-[10%] top-[20%] h-8 w-8 text-white/20"
+        className="left-[10%] top-[30%] h-6 w-6 text-white/20"
       />
 
       <FloatingIcon
