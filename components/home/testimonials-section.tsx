@@ -36,7 +36,7 @@ export function TestimonialsSection() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-white py-24 text-slate-800">
+      <section className="relative overflow-hidden gradient-banner py-24 text-slate-800">
         {/* Background Glow */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-red/10 blur-3xl" />
@@ -51,13 +51,13 @@ export function TestimonialsSection() {
             viewport={{ once: true }}
             className="mx-auto max-w-3xl text-center"
           >
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-brand-red">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-brand-red-foreground">
               Testimonials
             </p>
 
             <h2 className="font-display text-4xl leading-tight sm:text-5xl">
               Loved by
-              <span className="block text-brand-red">
+              <span className="block text-brand-red-foreground">
                 Cape Town Clients
               </span>
             </h2>

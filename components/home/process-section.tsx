@@ -48,13 +48,45 @@ export function ProcessSection() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-black py-24 text-white">
-        {/* Background Glow */}
-        <div className="absolute inset-0">
-          <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-brand-red/10 blur-3xl" />
-        </div>
+      <section className="relative overflow-hidden py-24 sm:py-32">
+      {/* BACKGROUND VIDEO */}
+      <div className="absolute inset-0">
+        <motion.video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+          animate={{
+            scale: [1, 1.08, 1],
+            x: [0, -20, 0],
+            y: [0, 12, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <source src="/bubbles.mp4" type="video/mp4" />
+        </motion.video>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Luxury slate overlay */}
+        <div className="absolute inset-0 bg-blue-950/20" />
+
+        {/* Cinematic gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/60 via-blue-950/30 to-blue-950/90" />
+
+        {/* Ambient lighting */}
+        <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-brand-red/15 blur-[150px]" />
+
+        <div className="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-white/5 blur-[150px]" />
+
+        <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-[120px]" />
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
           {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -63,13 +95,13 @@ export function ProcessSection() {
             viewport={{ once: true }}
             className="mx-auto max-w-3xl text-center"
           >
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-brand-red">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-brand-red-foreground">
               How It Works
             </p>
 
             <h2 className="font-display text-4xl leading-tight sm:text-5xl">
               Laundry Made
-              <span className="block text-brand-red">
+              <span className="block text-brand-red-foreground">
                 Effortless
               </span>
             </h2>
