@@ -25,34 +25,35 @@ const titanOne = Titan_One({
 })
 
 export const metadata: Metadata = {
-  title: 'Odancia Laundry — Premium Laundry & Dry Cleaning in Cape Town',
-  description: 'Say goodbye to laundry day! Premium laundry, dry cleaning, and pickup delivery in Cape Town City Centre.',
+  metadataBase: new URL("https://odancialaundry.co.za"),
+
+  title: {
+    default: "Odancia Laundry | Premium Laundry in Cape Town",
+    template: "%s | Odancia Laundry",
+  },
+
+  description:
+    "Premium laundry, dry cleaning, pickup and delivery services in Cape Town.",
+
+  keywords: [
+    "Laundry Cape Town",
+    "Dry Cleaning Cape Town",
+    "Laundry Pickup Cape Town",
+    "Laundry Service Long Street",
+  ],
+
   openGraph: {
-    title: 'Odancia Laundry — Premium Laundry & Dry Cleaning in Cape Town',
-    description: 'Say goodbye to laundry day! Premium laundry, dry cleaning, and pickup delivery in Cape Town City Centre.',
-    type: 'website',
+    title: "Odancia Laundry",
+    description:
+      "Premium laundry and dry cleaning services in Cape Town.",
+    url: "https://odancialaundry.co.za",
+    siteName: "Odancia Laundry",
+    locale: "en_ZA",
+    type: "website",
   },
+
   twitter: {
-    card: 'summary',
-    title: 'Odancia Laundry — Premium Laundry & Dry Cleaning in Cape Town',
-    description: 'Say goodbye to laundry day! Premium laundry, dry cleaning, and pickup delivery in Cape Town City Centre.',
-  },
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    card: "summary_large_image",
   },
 }
 
@@ -62,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${archivoBlack.variable} ${dmSans.variable} ${titanOne.variable} bg-background`}>
+    <html lang="en" className={`${archivoBlack.variable} ${dmSans.variable} ${titanOne.variable} bg-background`} suppressHydrationWarning>
       <body className="font-body antialiased">
         <Header />
         {children}
