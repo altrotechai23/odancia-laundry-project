@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./navigation/Logo";
 import { PickupDialog } from "./booking/PickupDialog";
 
@@ -77,7 +76,33 @@ export function Header() {
       >
         <div className="flex h-16 items-center justify-between md:h-20">    
           <Logo />
-          <nav className="hidden items-center rounded-full border border-border/50 bg-background/60 p-1 backdrop-blur-xl md:flex">
+          <nav 
+          className="
+  hidden
+  items-center
+
+  rounded-full
+
+  border
+  border-white/10
+
+  bg-white/[0.04]
+
+  p-1.5
+
+  shadow-[0_10px_40px_rgba(0,0,0,.18)]
+
+  backdrop-blur-2xl
+
+  supports-[backdrop-filter]:bg-white/[0.05]
+
+  md:flex
+"
+           
+           
+           >
+            
+            
             {navLinks.map((link) => {
               const active = isActive(link.href);
 
@@ -124,10 +149,6 @@ export function Header() {
 
           <div className="hidden items-center gap-4 md:flex">
 
-              {/* Theme Toggle */}
-              <div className="rounded-full border border-border/60 bg-background/60 p-1 backdrop-blur-xl">
-                <ThemeToggle />
-              </div>
 
               {/* Phone */}
               <Link
@@ -327,18 +348,6 @@ export function Header() {
 
                 <div className="flex items-center gap-3">
 
-                  <div
-                    className="
-                      rounded-full
-                      border
-                      border-white/10
-                      bg-white/5
-                      p-1
-                      backdrop-blur-xl
-                    "
-                  >
-                    <ThemeToggle />
-                  </div>
 
                   <motion.button
                     whileHover={{
