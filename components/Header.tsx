@@ -111,21 +111,28 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={`
-                    relative
-                    overflow-hidden
-                    rounded-full
-                    px-5
-                    py-2.5
-                    text-sm
-                    font-medium
-                    transition-all
-                    duration-300
-                    ${
-                      active
-                        ? "text-primary"
-                        : "text-foreground/70 hover:text-foreground"
-                    }
-                  `}
+  group
+  relative
+  overflow-hidden
+
+  rounded-full
+
+  px-6
+  py-3
+
+  text-sm
+  font-medium
+  tracking-wide
+
+  transition-all
+  duration-300
+
+  ${
+    active
+      ? "text-primary"
+      : "text-foreground/70 hover:text-foreground"
+  }
+`}
                 >
                   {active && (
                     <motion.div
