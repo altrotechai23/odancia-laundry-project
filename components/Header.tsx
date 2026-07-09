@@ -261,7 +261,7 @@ export function Header() {
               fixed
               inset-0
               z-[999]
-              bg-slate-800
+              bg-white
               backdrop-blur-3xl
               md:hidden
             "
@@ -280,7 +280,7 @@ export function Header() {
 
                   rounded-full
 
-                  bg-primary/15
+                  bg-primary
 
                   blur-[120px]
                 "
@@ -296,7 +296,7 @@ export function Header() {
 
                   rounded-full
 
-                  bg-brand-red/20
+                  bg-brand-red/50
 
                   blur-[120px]
                 "
@@ -362,7 +362,7 @@ export function Header() {
                       backdrop-blur-xl
                     "
                   >
-                    <X className="h-5 w-5 text-white" />
+                    <X className="h-5 w-5 text-primary" />
                   </motion.button>
 
                 </div>
@@ -429,7 +429,7 @@ export function Header() {
                                 ${
                                   active
                                     ? "text-primary"
-                                    : "text-white group-hover:text-primary"
+                                    : "text-primary/80 group-hover:text-primary"
                                 }
                               `}
                             >
@@ -488,7 +488,7 @@ export function Header() {
 
                   {/* Contact */}
 
-                  <div className="space-y-3">
+                  <div className="space-y-3 px-8">
 
                     <Link
                       href="tel:+27616375776"
@@ -497,7 +497,7 @@ export function Header() {
                         items-center
                         gap-3
 
-                        text-white/80
+                        text-primary/80
 
                         transition-colors
 
@@ -506,16 +506,16 @@ export function Header() {
                     >
                       <Phone className="h-5 w-5" />
 
-                      <span className="text-lg">
+                      <span className="text-lg text-primary/80">
                         +27 61 637 5776
                       </span>
                     </Link>
 
-                    <p className="text-sm text-white/50">
+                    <p className="text-sm text-primary/80">
                       Premium Laundry Service
                     </p>
 
-                    <p className="text-sm text-white/40">
+                    <p className="text-sm text-primary/80">
                       Cape Town, South Africa
                     </p>
 
