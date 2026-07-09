@@ -103,7 +103,7 @@
   --sidebar-ring: oklch(0.42 0.15 250);
 }
 
-.dark {
+/* .dark {
   --background: oklch(0.13 0.02 250);
   --foreground: oklch(0.93 0.01 250);
   --card: oklch(0.17 0.02 250);
@@ -140,7 +140,7 @@
   --sidebar-accent-foreground: oklch(0.88 0.02 250);
   --sidebar-border: oklch(0.25 0.02 250);
   --sidebar-ring: oklch(0.6 0.18 250);
-}
+} */
 
 @layer base {
   * {

@@ -62,19 +62,10 @@ export function Header() {
     <header className="relative z-400 bg-transparent px-1 py-4">
      
 
-      <motion.div
-        animate={{
-          opacity: mobileOpen ? 0 : 1,
-          y: mobileOpen ? -20 : 0,
-          scale: mobileOpen ? 0.98 : 1,
-        }}
-        transition={{
-          duration: 0.35,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+      <div
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
-        <div className="flex h-16 items-center justify-between md:h-20">    
+        <div className="flex px-0 h-16 items-center justify-between md:h-20">    
           <Logo />
           <nav 
           className="hidden items-center rounded-full border border-white/10 bg-white/[0.04]  p-1.5  shadow-[0_10px_40px_rgba(0,0,0,.18)] backdrop-blur-2xl supports-[backdrop-filter]:bg-white/[0.05] md:flex"
@@ -230,13 +221,13 @@ export function Header() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex items-center justify-center rounded-lg h-12 w-12 transition-colors hover:bg-muted md:hidden"
+            className="flex items-center justify-center rounded-full h-12 w-12 transition-colors hover:bg-muted md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {mobileOpen && (
