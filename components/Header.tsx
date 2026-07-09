@@ -110,10 +110,8 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-      <PickupDialog
-        open={open}
-        onClose={() => setOpen(false)}
-      />
+      
+      
     </header>
   );
 }

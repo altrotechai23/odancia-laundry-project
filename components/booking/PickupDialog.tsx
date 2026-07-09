@@ -4,7 +4,6 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Input } from "@/components/ui/input"
 import {  Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { X, Sparkles, Truck, Clock3, Loader2, Check } from "lucide-react";
 import { createPickup } from "@/app/actions/create-pickup"
 import { Button } from "@/components/ui/button";
@@ -162,7 +161,7 @@ const quickTimes = [
   "12:00",
   "18:00",
   "21:00",
-]
+];
 
 export function PickupDialog({
   open,
@@ -170,21 +169,20 @@ export function PickupDialog({
 }: PickupDialogProps) {
 
   const [submitting, setSubmitting] = useState(false)
-
   const [success, setSuccess] = useState(false)
-    const [step, setStep] = useState(0);
-    const [name, setName] = useState("")
-    const [phone, setPhone] = useState("")
-    const [email, setEmail] = useState("")
-    const [address, setAddress] = useState("");
-    const [pickupDate, setPickupDate] = useState("")
-    const [pickupTime, setPickupTime] = useState("")
-    const [suburb, setSuburb] = useState("");
-    const [notes, setNotes] = useState("");
-    const [selectedZone, setSelectedZone] = useState("")
-    const selectedSuburb = suburbs.find(
+  const [step, setStep] = useState(0);
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [email, setEmail] = useState("")
+  const [address, setAddress] = useState("");
+  const [pickupDate, setPickupDate] = useState("")
+  const [pickupTime, setPickupTime] = useState("")
+  const [suburb, setSuburb] = useState("");
+  const [notes, setNotes] = useState("");
+  const [selectedZone, setSelectedZone] = useState("")
+  const selectedSuburb = suburbs.find(
     (s) => s.name === suburb
-    )
+  )
 
     const deliveryFee = selectedSuburb?.fee ?? 0;
 
@@ -280,7 +278,7 @@ const handleSubmit = async () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-[90] bg-black/70 backdrop-blur-md"
+            className="fixed inset-0 z-[90] bg-black/20 backdrop-blur-md"
           />
 
           {/* SHEET */}
