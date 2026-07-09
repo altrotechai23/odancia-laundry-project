@@ -59,7 +59,7 @@ export function Header() {
   };
 
   return (
-    <header className="relative z-400 bg-transparent">
+    <header className="relative z-400 bg-transparent px-1 py-6">
      
 
       <motion.div
