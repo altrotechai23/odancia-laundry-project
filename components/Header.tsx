@@ -59,7 +59,7 @@ export function Header() {
   };
 
   return (
-    <header className="relative z-400 bg-transparent px-1 py-6">
+    <header className="relative z-400 bg-transparent px-1 py-4">
      
 
       <motion.div
@@ -77,29 +77,8 @@ export function Header() {
         <div className="flex h-16 items-center justify-between md:h-20">    
           <Logo />
           <nav 
-          className="
-  hidden
-  items-center
-
-  rounded-full
-
-  border
-  border-white/10
-
-  bg-white/[0.04]
-
-  p-1.5
-
-  shadow-[0_10px_40px_rgba(0,0,0,.18)]
-
-  backdrop-blur-2xl
-
-  supports-[backdrop-filter]:bg-white/[0.05]
-
-  md:flex
-"
-           
-           
+          className="hidden items-center rounded-full border border-white/10 bg-white/[0.04]  p-1.5  shadow-[0_10px_40px_rgba(0,0,0,.18)] backdrop-blur-2xl supports-[backdrop-filter]:bg-white/[0.05] md:flex"
+            
            >
             
             
@@ -251,7 +230,7 @@ export function Header() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-muted md:hidden"
+            className="flex items-center justify-center rounded-lg h-12 w-12 transition-colors hover:bg-muted md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -291,8 +270,7 @@ export function Header() {
 
             <div className="absolute inset-0 overflow-hidden">
 
-              <div
-                className="
+              <div className="
                   absolute
                   -top-40
                   -right-40
@@ -308,8 +286,7 @@ export function Header() {
                 "
               />
 
-              <div
-                className="
+              <div className="
                   absolute
                   -bottom-40
                   -left-40

@@ -21,7 +21,7 @@ export default function HomePage() {
       <PickupServicesSection />
       <BeforeAfterShowcase />
       <ShopShowcase />
-      <StatsBars />
+      {/* <StatsBars /> */}
       <ServicesBento />  
       <FeaturesSection />
       <TestimonialsSection />
