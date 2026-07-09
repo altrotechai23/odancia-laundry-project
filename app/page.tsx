@@ -16,8 +16,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <CustomMarquee />
-      <AboutSection />
+      <CustomMarquee /> 
+      <AboutSection /> 
       <PickupServicesSection />
       <BeforeAfterShowcase />
       <ShopShowcase />

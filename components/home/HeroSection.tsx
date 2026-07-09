@@ -97,6 +97,7 @@ export function HeroSection() {
   })
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
+  // const y = "0%"
 
   return (
     <section
