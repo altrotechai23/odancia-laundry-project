@@ -23,7 +23,7 @@ export function AboutSection() {
             repeat: Infinity,
             ease: "easeInOut",
         }}
-        className="absolute  left-[-250px] top-[-100px]  h-900  w-900  rounded-full  bg-blue-100  pointer-events-none
+        className="absolute  left-[-250px] top-[-100px]  h-900  w-900  rounded-full  bg-blue-200  pointer-events-none
         "
         />
 
