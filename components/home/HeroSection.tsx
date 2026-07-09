@@ -133,7 +133,7 @@ export function HeroSection() {
       {/* FLOATING ICONS */}
       <FloatingIcon
         icon={Sparkles}
-        className="left-[10%] top-[30%] h-6 w-6 text-white/20"
+        className="hidden  left-[10%] top-[30%] h-6 w-6 text-white/20"
       />
 
       <FloatingIcon
@@ -229,7 +229,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
-            className="mt-14 grid max-w-3xl grid-cols-2 gap-4 md:grid-cols-4"
+            className="hidden sm:grid mt-14  max-w-3xl grid-cols-2 gap-4 md:grid-cols-4"
           >
             {[
               {

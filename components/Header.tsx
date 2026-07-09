@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
+import { Logo } from "./navigation/Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -26,14 +27,9 @@ export function Header() {
   return (
     <header className="relative z-40 bg-transparent">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between md:h-20">
-          <Link href="/" className="flex items-center gap-3 group">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-izdCA0xx70zF4A7fYXFcRXa8Cfh936.png"
-              alt="Odancia Laundry"
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
-          </Link>
+        <div className="flex h-16 items-center justify-between md:h-20">    
+            <Logo />
+         
 
           <nav className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (

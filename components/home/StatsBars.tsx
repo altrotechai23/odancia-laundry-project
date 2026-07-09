@@ -1,10 +1,6 @@
 "use client"
 import {motion, Variants} from "framer-motion"
-import {
-  Coffee, CreditCard, Leaf, Phone, Sparkles, Truck, Star,
-  Bot, ArrowRight, ChevronDown, Quote, Zap, Shield, Clock,
-  Droplets, Wind, Heart,
-} from "lucide-react";
+import { Leaf,Star, Bot,  Heart } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const staggerContainer = {

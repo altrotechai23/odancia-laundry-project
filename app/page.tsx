@@ -10,6 +10,7 @@ import { AboutSection } from "@/components/home/AboutSection";
 import CustomMarquee from "@/components/CustomMarquee";
 import StatsBars from "@/components/home/StatsBars";
 import ShopShowcase from "@/components/home/ShopShowcase";
+import { PickupServicesSection } from "@/components/home/PickupFeaturesSection";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <HeroSection />
       <CustomMarquee />
       <AboutSection />
+      <PickupServicesSection />
       <BeforeAfterShowcase />
       <ShopShowcase />
       <StatsBars />
