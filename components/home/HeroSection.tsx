@@ -105,7 +105,7 @@ export function HeroSection() {
       className="relative flex min-h-screen items-center overflow-hidden bg-black"
     >
       {/* Glass panel reveal overlay */}
-      <RevealOverlay />
+      {/* <RevealOverlay /> */}
       {/* VIDEO BACKGROUND */}
       <div className="absolute inset-0">
         <video
