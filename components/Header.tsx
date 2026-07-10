@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Logo } from "./navigation/Logo";
-import { PickupDialog } from "./booking/PickupDialog";
+import { DesktopNav } from "./navigation/DesktopNav";
+import { DesktopActions } from "./navigation/DesktopActions";
+import { MobileMenuButton } from "./navigation/MobileMenuButton";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -62,170 +64,22 @@ export function Header() {
     <header className="relative z-400 bg-transparent px-1 py-4">
      
 
-      <div
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <div className="flex px-0 h-16 items-center justify-between md:h-20">    
           <Logo />
-          <nav 
-          className="hidden items-center rounded-full border border-white/10 bg-white/[0.04]  p-1.5  shadow-[0_10px_40px_rgba(0,0,0,.18)] backdrop-blur-2xl supports-[backdrop-filter]:bg-white/[0.05] md:flex"
-            
-           >
-            
-            
-            {navLinks.map((link) => {
-              const active = isActive(link.href);
+          <DesktopNav
+            navLinks={navLinks}
+            isActive={isActive}
+          />
 
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`
-  group
-  relative
-  overflow-hidden
+          <DesktopActions
+            onSchedulePickup={() => setOpen(true)}
+          />
 
-  rounded-full
-
-  px-6
-  py-3
-
-  text-sm
-  font-medium
-  tracking-wide
-
-  transition-all
-  duration-300
-
-  ${
-    active
-      ? "text-primary"
-      : "text-foreground/70 hover:text-foreground"
-  }
-`}
-                >
-                  {active && (
-                    <motion.div
-                      layoutId="navbar-active"
-                      transition={{
-                        type: "spring",
-                        stiffness: 450,
-                        damping: 35,
-                      }}
-                      className="absolute inset-0 rounded-full bg-primary/10"
-                    />
-                  )}
-
-                  <span className="relative z-10">
-                    {link.label}
-                  </span>
-                </Link>
-              );
-            })}
-          </nav>
-
-          <div className="hidden items-center gap-4 md:flex">
-
-
-              {/* Phone */}
-              <Link
-                href="tel:+27616375776"
-                className="
-                  group
-                  flex
-                  items-center
-                  gap-3
-
-                  rounded-full
-
-                  border
-                  border-border/60
-
-                  bg-background/60
-
-                  px-5
-                  py-2.5
-
-                  backdrop-blur-xl
-
-                  transition-all
-                  duration-300
-
-                  hover:border-primary/40
-                  hover:bg-primary/5
-                "
-              >
-                <div
-                  className="
-                    flex
-                    h-9
-                    w-9
-                    items-center
-                    justify-center
-
-                    rounded-full
-
-                    bg-primary/10
-
-                    transition-colors
-
-                    group-hover:bg-primary/20
-                  "
-                >
-                  <Phone className="h-4 w-4 text-primary" />
-                </div>
-
-                <span className="text-sm font-medium text-foreground/80">
-                  +27 61 637 5776
-                </span>
-              </Link>
-
-              {/* CTA */}
-
-              <motion.button
-                whileHover={{
-                  scale: 1.04,
-                }}
-                whileTap={{
-                  scale: .97,
-                }}
-                transition={{
-                  duration: .25,
-                }}
-                onClick={() => setOpen(true)}
-                className="
-                  rounded-full
-
-                  gradient-cta
-
-                  px-7
-                  py-3
-
-                  text-sm
-                  font-semibold
-
-                  text-brand-red-foreground
-
-                  shadow-[0_15px_40px_rgba(220,38,38,.35)]
-
-                  transition-shadow
-                  duration-300
-
-                  hover:shadow-[0_20px_60px_rgba(220,38,38,.5)]
-                "
-              >
-                Schedule Pickup
-              </motion.button>
-
-          </div>
-
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex items-center justify-center rounded-full h-12 w-12 transition-colors hover:bg-muted md:hidden"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <MobileMenuButton
+            onOpen={() => setMobileOpen(true)}
+          />
         </div>
       </div>
 

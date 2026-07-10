@@ -1,62 +1,82 @@
 "use client";
 
-import { NavItem } from "./NavItem";
-import { NAV_LINKS } from "./constants";
-import { DesktopNavProps } from "./types";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface DesktopNavProps {
+  navLinks: NavLink[];
+  isActive: (href: string) => boolean;
+}
 
 export function DesktopNav({
-  pathname,
+  navLinks,
+  isActive,
 }: DesktopNavProps) {
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
-  };
-
   return (
     <nav
       className="
         hidden
-        lg:flex
         items-center
+        rounded-full
+        border
+        border-white/10
+        bg-white/[0.04]
+        p-1.5
+        shadow-[0_10px_40px_rgba(0,0,0,.18)]
+        backdrop-blur-2xl
+        supports-[backdrop-filter]:bg-white/[0.05]
+        md:flex
       "
     >
-      {/* Glass Container */}
+      {navLinks.map((link) => {
+        const active = isActive(link.href);
 
-      <div
-        className="relative
-          flex
-          items-center
-          gap-2
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`
+              group
+              relative
+              overflow-hidden
+              rounded-full
+              px-6
+              py-3
+              text-sm
+              font-medium
+              tracking-wide
+              transition-all
+              duration-300
+              ${
+                active
+                  ? "text-primary"
+                  : "text-foreground/70 hover:text-foreground"
+              }
+            `}
+          >
+            {active && (
+              <motion.div
+                layoutId="navbar-active"
+                transition={{
+                  type: "spring",
+                  stiffness: 450,
+                  damping: 35,
+                }}
+                className="absolute inset-0 rounded-full bg-primary/10"
+              />
+            )}
 
-          rounded-full
-
-          border
-          border-white/10
-
-          bg-white/[0.03]
-
-          px-3
-          py-2
-
-          backdrop-blur-2xl
-
-          shadow-[0_20px_80px_rgba(0,0,0,.25)]
-        "
-      >
-        {/* Background Glow */}
-
-        <div className="absolute inset-0  rounded-full  bg-gradient-to-r from-brand-red/5  via-transparent to-blue-500/5  pointer-events-none"
-        />
-
-        {NAV_LINKS.map((item) => (
-          <NavItem
-            key={item.href}
-            href={item.href}
-            label={item.label}
-            active={isActive(item.href)}
-          />
-        ))}
-      </div>
+            <span className="relative z-10">
+              {link.label}
+            </span>
+          </Link>
+        );
+      })}
     </nav>
   );
 }
