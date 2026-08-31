@@ -87,7 +87,13 @@ function FloatingIcon({
   )
 }
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onSchedulePickup: () => void;
+}
+
+export function HeroSection({
+  onSchedulePickup,
+}: HeroSectionProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState(false)
 
