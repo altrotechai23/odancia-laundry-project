@@ -175,7 +175,7 @@ function bookingDetails(data: PickupEmailData) {
           font-size:14px;
           font-weight:700;
         ">
-          ${fee}
+          ${fee ? "Free": "Yes"}
         </td>
       </tr>
     </table>

@@ -1191,7 +1191,7 @@ export async function createPickup(
       const { error: adminEmailError } =
         await resend.emails.send({
           from: FROM_EMAIL,
-          to: [ADMIN_EMAIL],
+          to: [ADMIN_EMAIL, "odancialaundry@gmail.com"],
           subject:
             `🚨 New Pickup Request · ${bookingId} · ${customer_name.trim()}`,
           html: buildAdminEmail({
