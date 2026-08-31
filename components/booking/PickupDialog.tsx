@@ -827,9 +827,8 @@ const handleSubmit = useCallback(async () => {
       zoneFee={zoneFeeLabel}
       pickupDate={pickupDate}
       pickupTime={pickupTime}
-      selectedZone={suburb}
+      selectedZone={selectedZone}
       submitting={submitting}
-      error={error}
       prevStep={prevStep}
       handleSubmit={handleSubmit}
     />
