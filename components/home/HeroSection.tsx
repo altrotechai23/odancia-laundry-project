@@ -279,9 +279,9 @@ export function HeroSection() {
         <ChevronDown className="h-6 w-6" />
       </motion.div>
       <PickupDialog
-              open={open}
-              onClose={() => setOpen(false)}
-            />
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </section>
   )
 }

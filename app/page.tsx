@@ -8,7 +8,7 @@ import { ProcessSection } from "@/components/home/process-section";
 import { CTASection } from "@/components/home/cta-section";
 import { AboutSection } from "@/components/home/AboutSection";
 import CustomMarquee from "@/components/CustomMarquee";
-import StatsBars from "@/components/home/StatsBars";
+// import StatsBars from "@/components/home/StatsBars";
 import ShopShowcase from "@/components/home/ShopShowcase";
 import { PickupServicesSection } from "@/components/home/PickupFeaturesSection";
 

@@ -61,28 +61,22 @@ export function Header() {
   };
 
   return (
-    <header className="relative z-400 bg-transparent px-1 py-4">
-     
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-      >
+    <header className="relative z-40 bg-transparent px-1 py-4"> 
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex px-0 h-16 items-center justify-between md:h-20">    
           <Logo />
           <DesktopNav
             navLinks={navLinks}
             isActive={isActive}
           />
-
           <DesktopActions
             onSchedulePickup={() => setOpen(true)}
           />
-
           <MobileMenuButton
             onOpen={() => setMobileOpen(true)}
           />
         </div>
       </div>
-
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -406,9 +400,7 @@ export function Header() {
 
           </motion.div>
         )}
-      </AnimatePresence>
-      
-      
+      </AnimatePresence>  
     </header>
   );
 }
