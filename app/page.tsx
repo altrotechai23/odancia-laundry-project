@@ -30,6 +30,11 @@ export default function HomePage() {
   return (
     <>
     
+
+      {/* ========================================================= */}
+      {/* HERO */}
+      {/* ========================================================= */}
+
       <HeroSection onSchedulePickup={openBooking} />
 
       <CustomMarquee />

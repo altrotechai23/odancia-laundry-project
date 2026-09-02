@@ -197,13 +197,7 @@ export function AboutSection() {
           {/* Card 3 */}
           <motion.div
             whileHover={{ y: -8 }}
-            className="
-              rounded-3xl
-              border
-              border-black/5
-              bg-white
-              p-8
-              shadow-lg
+            className="rounded-3xl  border  border-black/5  bg-white  p-8  shadow-lg
               transition-all
             "
           >
