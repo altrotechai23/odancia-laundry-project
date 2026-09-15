@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-
 import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesBento } from "@/components/home/services-bento";
 import { BeforeAfterShowcase } from "@/components/home/before-after-showcase";

@@ -15,9 +15,9 @@ const dryCleaningData: PricingCategory[] = [
 ];
 
 const laundryData: PricingCategory[] = [
-  { name: "Wash & Fold", items: [{ name: "1 Load Wash/Dry/Fold", price: "R175" }, { name: "Stay-soft per load", price: "R20" }, { name: "Drying Per Basket", price: "R100" }] },
-  { name: "Ironing", items: [{ name: "Ironing per kg", price: "R120" }, { name: "Steam Iron Suits", price: "R100" }, { name: "Steam Short Dress", price: "R100" }, { name: "Steam Long Dress", price: "R150" }] },
-  { name: "Bedding", items: [{ name: "Sheets Single", price: "R35" }, { name: "Sheets Double", price: "R50" }, { name: "Blanket Double", price: "R250" }, { name: "Blanket Queen", price: "R400" }] },
+  { name: "Wash & Fold", items: [{ name: "Wash, dry, fold 1 load (Color)", price: "R195" }, { name: "Stay-soft per wash load", price: "R20" }, { name: "Drying Per Basket", price: "R150" }] },
+  { name: "Ironing", items: [{ name: "Ironing per kg", price: "R150" }, { name: "Steam Iron Suits", price: "R150" }, { name: "Steam Iron Dresses Short", price: "R100" }, { name: "Steam Iron Dresses Long", price: "R200" }] },
+  { name: "Bedding", items: [{ name: "Bed Sheets Single", price: "R35" }, { name: "Bed Sheets Double", price: "R50" }, { name: "Blanket Double", price: "R250" }, { name: "Blanket Queen", price: "R400" }] },
 ];
 
 const shoeData: PricingCategory[] = [
