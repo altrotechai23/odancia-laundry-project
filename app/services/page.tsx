@@ -8,10 +8,22 @@ import { Shirt, Waves, Footprints, Zap, ArrowRight } from "lucide-react";
 type PricingCategory = { name: string; items: { name: string; price: string }[] };
 
 const dryCleaningData: PricingCategory[] = [
-  { name: "Tops & Blouses", items: [{ name: "Blouse / Body Suit", price: "R121" }, { name: "Jersey", price: "R126" }, { name: "Shirt / T-Shirt", price: "R81" }, { name: "Silk Blouse", price: "R153" }, { name: "Tie", price: "R89" }] },
-  { name: "Dresses", items: [{ name: "Short / Casual", price: "R170" }, { name: "Long Dress", price: "R263" }, { name: "Evening Dress", price: "R381" }, { name: "Wedding Dress", price: "R763" }] },
-  { name: "Suits & Formal", items: [{ name: "Suit (2 piece)", price: "R199" }, { name: "Suit (3 piece)", price: "R262" }, { name: "Jacket", price: "R145" }, { name: "Trouser", price: "R131" }, { name: "Waistcoat", price: "R101" }] },
-  { name: "Outerwear", items: [{ name: "Coat - Short/Rain", price: "R181" }, { name: "Coat - Long/Winter", price: "R220" }, { name: "Padded Jacket", price: "R256" }] },
+  { 
+    name: "Tops & Blouses", 
+    items: [{ name: "Blouse / Body Suit", 
+    price: "R121",
+  }, 
+  { name: "Jersey", 
+    price: "R126" }, { name: "Shirt / T-Shirt", price: "R81" }, 
+  { name: "Silk Blouse", price: "R153" }, { name: "Tie", price: "R89" }] },
+  { name: "Dresses", items: [{ name: "Short / Casual", price: "R170" }, 
+  { name: "Long Dress", price: "R263" }, { name: "Evening Dress", price: "R381" }, 
+  { name: "Wedding Dress", price: "R763" }] },
+  { name: "Suits & Formal", items: [{ name: "Suit (2 piece)", price: "R199" }, 
+  { name: "Suit (3 piece)", price: "R262" }, { name: "Jacket", price: "R145" }, 
+  { name: "Trouser", price: "R131" }, { name: "Waistcoat", price: "R101" }] },
+  { name: "Outerwear", items: [{ name: "Coat - Short/Rain", price: "R181" }, 
+  { name: "Coat - Long/Winter", price: "R220" }, { name: "Padded Jacket", price: "R256" }] },
 ];
 
 const laundryData: PricingCategory[] = [

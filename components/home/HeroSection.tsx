@@ -121,7 +121,7 @@ export function HeroSection({
           playsInline
           className="h-full w-full object-cover scale-105"
         >
-          <source src="/odancia-vid.mp4" type="video/mp4" />
+          <source src="/bg-new-vid.mp4" type="video/mp4" />
         </video>
 
         {/* DARK OVERLAY */}
