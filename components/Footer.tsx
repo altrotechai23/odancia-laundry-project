@@ -153,11 +153,11 @@ export function Footer() {
                 </a>
 
                 <a
-                  href="mailto:info@odancialaundry.co.za"
+                  href="mailto:odancialaundry8@gmail.co.za"
                   className="flex items-center gap-3 text-sm text-background/55 transition-colors hover:text-background"
                 >
                   <Mail className="h-4 w-4 shrink-0 text-brand-red" />
-                  info@odancialaundry.co.za
+                  odancialaundry8@gmail.co.za
                 </a>
 
                 <div className="flex items-start gap-3 text-sm text-background/55">

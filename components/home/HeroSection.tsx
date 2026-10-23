@@ -125,7 +125,7 @@ export function HeroSection({
         </video>
 
         {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* GRADIENT OVERLAY */}
         <div className="absolute inset-0 bg-linear-to-br from-black/80 via-black/30 to-brand-red/20" />
